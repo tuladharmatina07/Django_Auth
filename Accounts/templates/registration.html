@@ -9,11 +9,11 @@
         <div class ="text-center" style ="margin-top: 50px;">
             {% if messages %}
                 {% for message in messages %}
-                <div class= "alert alert success font"><b> {{message}}</b></div>
+                <div class= "alert alert success"><b> {{message}}</b></div>
                 {% endfor %}
             {% endif %}
 
-            <form method = "post" novalidate>
+            <form method = "post">
                 {% csrf_token %}
                 <h3 class ="text-info"><b>Registration Form</b></h3>
                 <span class ="text-danger font"><b>{{fm.username.errors}}</b></span>
