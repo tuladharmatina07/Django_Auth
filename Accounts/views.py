@@ -14,7 +14,16 @@ def registration(request):
             fm.save()
             messages.success(request,
             'Registration Created Successfully')
-        return redirect('Login')
+        return redirect('/')
 
     return render(request, 'registration.html', {'fm': fm})
 
+# def update(request):
+#     if request.method == "POST":
+#         u_fm = UpdateForm(data= request.POST, instance=request.user)
+#         if u_fm.is_valid():
+#             u_fm.save()
+#             message.success(request, "Profile updated")
+#         else:
+#              u_fm = UpdateForm(instance=request.user)
+#     return render(request,'update-profile.html', {'u_fm': u_fm})
